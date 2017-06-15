@@ -1,0 +1,16 @@
+
+
+~BinarySearchTree()
+{
+	makeEmpty();
+}
+
+void makeEmpty(BinaryNode * & t)
+{
+	if(t ! = nullptr){
+		makeEmpty(t->left);
+		makeEmpty(t->right);
+		delete t;
+	}
+	t= nullptr;
+}
